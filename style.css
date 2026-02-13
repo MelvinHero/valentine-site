@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 400px;
+    padding: 20px;
+    z-index: 2;
+}
+
+h1 {
+    margin-bottom: 10px;
+}
+
+.loveText {
+    font-size: 15px;
+    margin-bottom: 20px;
+}
+
+.slider {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.slide {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.timer {
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    position: relative;
+}
+
+button {
+    padding: 12px 20px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#yesBtn {
+    background: #ff2e63;
+    color: white;
+}
+
+#yesBtn:hover {
+    transform: scale(1.1);
+}
+
+#noBtn {
+    background: white;
+    color: #ff2e63;
+    position: relative;
+}
+
+.overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0;
+    transition: opacity 2s;
+    z-index: 1;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.finalText {
+    position: fixed;
+    top: 45%;
+    width: 100%;
+    font-size: 26px;
+    opacity: 0;
+    transition: opacity 2s;
+    z-index: 3;
+}
